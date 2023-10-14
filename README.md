@@ -17,3 +17,4 @@ Written in Xilink Vivado v2020<br><br>
 - 4 bit 8x1 mux
 - 1 bit comparator
 - 4 bit comparator
+- Solutions to some problem statements (icecream, three dice - refer PDF)
