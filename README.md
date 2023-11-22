@@ -13,8 +13,12 @@ Written in Xilink Vivado v2020<br><br>
 - 2x1 MUX using structural and RTL
 - 4x1 MUX using 2x1 MUX in RTL
 - 2x1 MUX using input A, B as one vector with 2 bits defined
-- 4 bit 4x1 mux
-- 4 bit 8x1 mux
-- 1 bit comparator
-- 4 bit comparator
+- 4-bit 4x1 mux
+- 4-bit 8x1 mux
+- 1-bit comparator
+- 4-bit comparator
 - Solutions to some problem statements (icecream, three dice - refer PDF)
+- D flip flops with sync/async reset
+- 8-bit data registers with sync/async reset
+- 8-bit up-counter/down-counter
+- 1010 overlapping sequence detector (Mealy machine) 
