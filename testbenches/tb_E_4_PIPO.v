@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 11/08/2023 03:33:33 PM
+// Create Date: 22.11.2023 21:23:29
 // Design Name: 
-// Module Name: tb_E_8_downcount_async
+// Module Name: tb_E_4_PIPO
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,43 +20,30 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module tb_E_8_downcount_async();
-
-wire [7:0]count ;
+module tb_E_4_PIPO();
 reg clk,rst;
+reg [3:0] pi;
+wire [3:0] po;
+E_4_PIPO uut(clk,rst, pi, po);
 
-E_8_downcount_async uut(clk,rst,count);
 
 initial 
     begin
         clk=0;
-        rst=0;
-        forever #1 clk = ~clk;
-          
+        forever #1 clk = ~clk;  
     end
-
-
 initial
 begin
-rst=0;
-#20
-
-rst=1;
-
-#20
-
-rst=0;
-#20
-
-rst=1;
-#20
-
-rst=0;
-#20
-
-#500 $finish;
-
+ rst=1; #5
+ 
+ rst=0; #5
+ 
+ pi = 4'b1010; #5
+ 
+ pi = 4'b1111; #5
+ 
+ pi = 4'b0101; #5
+ 
+ #150 $finish;
 end
-
-
 endmodule

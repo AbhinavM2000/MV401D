@@ -20,39 +20,24 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module tb_E_8_downcount_async();
+module tb_E_8_upcount_async();
 
 wire [7:0]count ;
-reg clk,rst;
+reg clk;
 
-E_8_downcount_async uut(clk,rst,count);
+E_8_upcount_sync uut(clk,count);
 
 initial 
     begin
         clk=0;
-        rst=0;
         forever #1 clk = ~clk;
-          
     end
 
 
 initial
 begin
-rst=0;
-#20
 
-rst=1;
 
-#20
-
-rst=0;
-#20
-
-rst=1;
-#20
-
-rst=0;
-#20
 
 #500 $finish;
 

@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 11/08/2023 03:33:33 PM
+// Create Date: 22.11.2023 21:23:29
 // Design Name: 
-// Module Name: tb_E_8_downcount_async
+// Module Name: tb_DB_8_syncrst
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,43 +20,30 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module tb_E_8_downcount_async();
-
-wire [7:0]count ;
+module tb_DB_8_syncrst();
 reg clk,rst;
+reg [7:0] D;
+wire [7:0] Q;
+DB_8syncrst uut(rst,clk, D, Q);
 
-E_8_downcount_async uut(clk,rst,count);
 
 initial 
     begin
         clk=0;
-        rst=0;
-        forever #1 clk = ~clk;
-          
+        forever #1 clk = ~clk;  
     end
-
-
 initial
 begin
-rst=0;
-#20
-
-rst=1;
-
-#20
-
-rst=0;
-#20
-
-rst=1;
-#20
-
-rst=0;
-#20
-
-#500 $finish;
-
+ rst=1; #5
+ 
+ rst=0; #5
+ 
+D = 8'b10101010; #5
+ 
+D = 8'b11111111; #5
+ 
+D = 8'b01010101; #5
+ 
+ #150 $finish;
 end
-
-
 endmodule
