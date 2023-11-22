@@ -1,5 +1,5 @@
 # MV401D
-Verilog code and testbenches for MV401 UoH <br>
+Verilog code and testbenches for MV401, CASEST, UoH <br>
 Testbenches are in the testbenches folder.<br><br>
 
 Written in Xilink Vivado v2020<br><br>
