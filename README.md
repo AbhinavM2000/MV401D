@@ -2,7 +2,7 @@
 Verilog code and testbenches for MV401, CASEST, UoH <br>
 Testbenches are in the testbenches folder.<br><br>
 
-Written in Xilink Vivado v2020<br><br>
+Written in verilog using Xilink Vivado v2020.1<br><br>
 
 # Contents
 - Half adder (structural)
