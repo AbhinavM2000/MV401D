@@ -22,4 +22,7 @@ Written in Xilink Vivado v2020<br><br>
 - 8-bit data registers with sync/async reset
 - 8-bit up-counter/down-counter
 - Shift registers: PIPO, SISO, Universal shift register
-- 1010 overlapping sequence detector (Mealy machine) 
+- 1010 overlapping sequence detector (Mealy machine)
+
+<br>
+More exersices can be found in the R1 folder containing PDFs.
